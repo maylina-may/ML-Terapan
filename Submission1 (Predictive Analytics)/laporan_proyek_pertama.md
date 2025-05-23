@@ -1,21 +1,16 @@
-# Laporan Proyek Machine Learning - Nama Anda
+# Laporan Proyek Pertama Machine Learning Terapan - Maylina Nur'aini
 
 ## Domain Proyek
 
-Pada bagian ini, kamu perlu menuliskan latar belakang yang relevan dengan proyek yang diangkat.
+Pendidikan memiliki peran penting dalam membentuk masa depan individu dan masyarakat. Evaluasi terhadap performa siswa menjadi aspek krusial dalam mengidentifikasi kebutuhan belajar serta merancang strategi pengajaran yang lebih efektif. Penilaian yang berbasis data memungkinkan pendidik memahami pola performa akademik siswa secara lebih objektif.
 
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Jelaskan mengapa dan bagaimana masalah tersebut harus diselesaikan
-- Menyertakan hasil riset terkait atau referensi. Referensi yang diberikan harus berasal dari sumber yang kredibel dan author yang jelas.
-- Format Referensi dapat mengacu pada penulisan sitasi [IEEE](https://journals.ieeeauthorcenter.ieee.org/wp-content/uploads/sites/7/IEEE_Reference_Guide.pdf), [APA](https://www.mendeley.com/guides/apa-citation-guide/) atau secara umum seperti [di sini](https://penerbitdeepublish.com/menulis-buku-membuat-sitasi-dengan-mudah/)
-- Sumber yang bisa digunakan [Scholar](https://scholar.google.com/)
+Dataset Students Performance in Exams digunakan dalam proyek ini untuk mengkaji pengaruh berbagai faktor seperti jenis kelamin, etnis, tingkat pendidikan orang tua, jenis makan siang, serta partisipasi dalam kursus persiapan ujian terhadap hasil ujian siswa. Pemilihan domain pendidikan didasarkan pada urgensi memahami faktor-faktor penentu keberhasilan akademik dalam rangka meningkatkan kualitas pendidikan.
+
+Masalah ini perlu diselesaikan karena temuan dari model prediksi dapat digunakan untuk memberikan rekomendasi yang lebih tepat kepada siswa, guru, dan pemangku kebijakan. Model machine learning mampu mengidentifikasi pola tersembunyi dalam data yang tidak mudah terlihat melalui analisis manual.
+
+Studi terdahulu menunjukkan bahwa latar belakang sosial, ekonomi, dan demografis memberikan kontribusi yang signifikan terhadap performa akademik siswa [1][2]. Oleh karena itu, pemanfaatan machine learning dalam klasifikasi performa siswa menjadi pendekatan yang relevan dan potensial dalam ranah pendidikan.
 
 ## Business Understanding
-
-Pada bagian ini, kamu perlu menjelaskan proses klarifikasi masalah.
-
-Bagian laporan ini mencakup:
-
 ### Problem Statements
 
 Menjelaskan pernyataan masalah latar belakang:
@@ -84,3 +79,8 @@ Ingatlah, metrik evaluasi yang digunakan harus sesuai dengan konteks data, probl
 _Catatan:_
 - _Anda dapat menambahkan gambar, kode, atau tabel ke dalam laporan jika diperlukan. Temukan caranya pada contoh dokumen markdown di situs editor [Dillinger](https://dillinger.io/), [Github Guides: Mastering markdown](https://guides.github.com/features/mastering-markdown/), atau sumber lain di internet. Semangat!_
 - Jika terdapat penjelasan yang harus menyertakan code snippet, tuliskan dengan sewajarnya. Tidak perlu menuliskan keseluruhan kode project, cukup bagian yang ingin dijelaskan saja.
+
+## Referensi
+
+[1] K. Sirin, "Socioeconomic Status and Academic Achievement: A Meta-Analytic Review of Research," Review of Educational Research, vol. 75, no. 3, pp. 417–453, 2005.
+[2] D. Jeynes, "The Relationship Between Parental Involvement and Urban Secondary School Student Academic Achievement: A Meta-Analysis," Urban Education, vol. 42, no. 1, pp. 82–110, 2007.
