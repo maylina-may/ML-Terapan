@@ -1,6 +1,6 @@
 # Laporan Proyek Pertama Machine Learning Terapan - Maylina Nur'aini
 
-## Domain Proyek
+## Domain Proyek 
 Pendidikan memiliki peran penting dalam membentuk masa depan individu dan masyarakat. Evaluasi terhadap performa siswa menjadi aspek krusial dalam mengidentifikasi kebutuhan belajar serta merancang strategi pengajaran yang lebih efektif. Penilaian yang berbasis data memungkinkan pendidik memahami pola performa akademik siswa secara lebih objektif.
 
 Dataset Students Performance in Exams digunakan dalam proyek ini untuk mengkaji pengaruh berbagai faktor seperti jenis kelamin, etnis, tingkat pendidikan orang tua, jenis makan siang, serta partisipasi dalam kursus persiapan ujian terhadap hasil ujian siswa. Pemilihan domain pendidikan didasarkan pada urgensi memahami faktor-faktor penentu keberhasilan akademik dalam rangka meningkatkan kualitas pendidikan.
