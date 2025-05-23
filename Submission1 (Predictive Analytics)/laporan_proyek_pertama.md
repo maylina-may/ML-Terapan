@@ -52,30 +52,24 @@ Berdasarkan kode yang sudah dibuat, tahapan Exploratory Data Analysis (EDA) yang
 
 ## Data Preparation
 Pada bagian ini, menerapkan teknik-teknik persiapan data yang penting sebelum data digunakan untuk melatih model machine learning. Langkah-langkah ini memastikan data dalam format yang tepat dan berkualitas untuk analisis.
-
 1. Pengecekan Missing Values
-
-   Langkah pertama dalam persiapan data adalah memeriksa apakah ada nilai yang hilang (missing values) dalam dataset. Nilai yang hilang dapat mempengaruhi kinerja model, oleh karena itu perlu diidentifikasi dan ditangani.
+Langkah pertama dalam persiapan data adalah memeriksa apakah ada nilai yang hilang (missing values) dalam dataset. Nilai yang hilang dapat mempengaruhi kinerja model, oleh karena itu perlu diidentifikasi dan ditangani.
 
 Alasan : Missing values dapat menyebabkan bias dalam analisis dan pelatihan model. Model machine learning umumnya tidak dapat menangani nilai yang hilang secara langsung.
 ```
 # Cek missing value
 print(data.isnull().sum())
 ```
-
 2. Pembuatan Label Klasifikasi
-
-   Untuk tugas klasifikasi ini, perlu mendefinisikan label atau target variabel. Berdasarkan tujuan proyek, akan membuat label biner yang menunjukkan apakah siswa "lulus" atau "tidak lulus" dalam mata pelajaran matematika berdasarkan skor matematika mereka.
+Untuk tugas klasifikasi ini, perlu mendefinisikan label atau target variabel. Berdasarkan tujuan proyek, akan membuat label biner yang menunjukkan apakah siswa "lulus" atau "tidak lulus" dalam mata pelajaran matematika berdasarkan skor matematika mereka.
 
 Alasan : Model klasifikasi memerlukan target variabel diskrit. Dalam kasus ini, kita mengklasifikasikan siswa berdasarkan pencapaian skor matematika mereka (> = 70 sebagai lulus).
 ```
 # Buat label klasifikasi: apakah nilai matematika >= 70 (1 = lulus, 0 = tidak)
 data['pass_math'] = np.where(data['math score'] >= 70, 1, 0)
 ```
-
 3. Encoding Fitur Kategorikal
-
-   Dataset ini berisi fitur kategorikal seperti 'gender', 'race/ethnicity', 'parental level of education', 'lunch', dan 'test preparation course'. Model machine learning sebagian besar bekerja dengan data numerik, sehingga fitur-fitur ini perlu diubah menjadi representasi numerik.
+Dataset ini berisi fitur kategorikal seperti 'gender', 'race/ethnicity', 'parental level of education', 'lunch', dan 'test preparation course'. Model machine learning sebagian besar bekerja dengan data numerik, sehingga fitur-fitur ini perlu diubah menjadi representasi numerik.
 
 Alasan : Model machine learning tidak dapat memproses data dalam bentuk teks atau kategori secara langsung. Encoding mengubah fitur kategorikal menjadi format numerik yang dapat dipahami oleh model. Kami menggunakan *LabelEncoder* dan *pd.factorize* untuk melakukan encoding ini. *LabelEncoder* cocok untuk fitur dengan dua kategori, sementara *pd.factorize* berguna untuk fitur dengan lebih dari dua kategori, mengubahnya menjadi representasi numerik berbasis integer.
 ```
@@ -94,17 +88,14 @@ data.head()
 Pada tahap ini, akan membangun dan melatih model machine learning untuk memprediksi apakah seorang siswa akan lulus mata pelajaran matematika berdasarkan fitur-fitur yang ada. Berdasarkan pendekatan klasifikasi yang dipilih, ini akan menggunakan dua algoritma yang umum digunakan : Logistic Regression dan Random Forest.
 
 1. Pemilihan Model, memilih dua algoritma klasifikasi untuk membandingkan kinerja mereka dalam menyelesaikan masalah ini :
-   
-   - Logistic Regression : Algoritma linier yang sederhana namun efektif untuk masalah klasifikasi biner. Model ini memprediksi probabilitas suatu kelas (dalam kasus ini, probabilitas siswa lulus) berdasarkan kombinasi linier fitur-fitur input.
+- Logistic Regression : Algoritma linier yang sederhana namun efektif untuk masalah klasifikasi biner. Model ini memprediksi probabilitas suatu kelas (dalam kasus ini, probabilitas siswa lulus) berdasarkan kombinasi linier fitur-fitur input.
      
 Kelebihan: Cepat, mudah diinterpretasikan, baik untuk dataset yang linear separable, membutuhkan sumber daya komputasi yang relatif sedikit. Kekurangan: Kurang efektif pada data yang kompleks atau non-linier, sensitif terhadap outlier, mengasumsikan linearitas antara fitur dan log-odds.
 
-   - Random Forest : Algoritma ensemble yang membangun banyak pohon keputusan dan menggabungkan prediksi mereka. Ini adalah model yang kuat dan serbaguna yang dapat menangani hubungan non-linier dan interaksi fitur.
+- Random Forest : Algoritma ensemble yang membangun banyak pohon keputusan dan menggabungkan prediksi mereka. Ini adalah model yang kuat dan serbaguna yang dapat menangani hubungan non-linier dan interaksi fitur.
 
 Kelebihan : Umumnya memberikan akurasi tinggi, kurang rentan terhadap overfitting dibandingkan pohon keputusan tunggal, dapat menangani data dengan fitur yang banyak dan interaksi yang kompleks, memberikan estimasi pentingnya fitur. Kekurangan: Kurang interpretable dibandingkan Logistic Regression, membutuhkan lebih banyak komputasi dan memori, bisa lambat untuk dataset yang sangat besar, bias terhadap fitur dengan banyak kategori.
-
 2. Pelatihan Model
-
 Setelah memilih algoritma adalah melatih masing-masing model menggunakan data latih (X_train dan y_train) yang telah disiapkan pada tahap sebelumnya.
 ```
 # Logistic Regression
@@ -117,12 +108,9 @@ rf = RandomForestClassifier(random_state=42)
 rf.fit(X_train, y_train)
 y_pred_rf = rf.predict(X_test)
 ```
-
 - Untuk Logistic Regression, menggunakan parameter *max_iter=1000*. Ini mengatur jumlah maksimum iterasi untuk konvergensi algoritma. Nilai yang lebih tinggi diberikan untuk memastikan model memiliki cukup iterasi untuk menemukan solusi optimal, terutama jika dataset cukup besar atau kompleks.
 - Untuk Random Forest, menggunakan parameter *random_state=42*. Ini memastikan bahwa pembentukan pohon keputusan dalam forest adalah deterministik dan dapat direproduksi setiap kali kode dijalankan dengan parameter yang sama.
-
 3. Pemilihan Model Terbaik
-   
 Berdasarkan hasil evaluasi yang telah dilakukan (pada bagian selanjutnya di notebook Anda), kita dapat membandingkan kinerja kedua model menggunakan metrik akurasi :
 - Akurasi Logistic Regression: 0.90
 - Akurasi Random Forest: 0.86
