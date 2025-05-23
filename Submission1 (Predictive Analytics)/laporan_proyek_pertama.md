@@ -83,4 +83,5 @@ _Catatan:_
 ## Referensi
 
 [1] K. Sirin, "Socioeconomic Status and Academic Achievement: A Meta-Analytic Review of Research," Review of Educational Research, vol. 75, no. 3, pp. 417–453, 2005.
+
 [2] D. Jeynes, "The Relationship Between Parental Involvement and Urban Secondary School Student Academic Achievement: A Meta-Analysis," Urban Education, vol. 42, no. 1, pp. 82–110, 2007.
