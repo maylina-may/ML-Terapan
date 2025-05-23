@@ -14,27 +14,26 @@ Studi terdahulu menunjukkan bahwa latar belakang sosial, ekonomi, dan demografis
 ### Problem Statements
 
 Menjelaskan pernyataan masalah latar belakang:
-- Pernyataan Masalah 1
-- Pernyataan Masalah 2
-- Pernyataan Masalah n
+- Pernyataan Masalah 1 : Bagaimana pengaruh faktor demografis seperti jenis kelamin, etnis, dan tingkat pendidikan orang tua terhadap performa akademik siswa dalam ujian?
+- Pernyataan Masalah 2 : Apakah jenis makan siang yang dikonsumsi siswa berhubungan dengan hasil ujian mereka?
+- Pernyataan Masalah 3 : Sejauh mana partisipasi siswa dalam kursus persiapan ujian dapat meningkatkan nilai ujian mereka?
+- Pernyataan Masalah 4 : Bagaimana membangun model machine learning yang dapat memprediksi performa siswa berdasarkan faktor-faktor tersebut?
 
 ### Goals
 
 Menjelaskan tujuan dari pernyataan masalah:
-- Jawaban pernyataan masalah 1
-- Jawaban pernyataan masalah 2
-- Jawaban pernyataan masalah n
-
-Semua poin di atas harus diuraikan dengan jelas. Anda bebas menuliskan berapa pernyataan masalah dan juga goals yang diinginkan.
-
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Menambahkan bagian “Solution Statement” yang menguraikan cara untuk meraih goals. Bagian ini dibuat dengan ketentuan sebagai berikut: 
+- Jawaban pernyataan masalah 1 : Mengidentifikasi faktor-faktor demografis yang signifikan memengaruhi performa ujian siswa untuk membantu pendidik dan pemangku kebijakan dalam merancang intervensi yang tepat.
+- Jawaban pernyataan masalah 2 : Menganalisis hubungan antara jenis makan siang dan hasil ujian untuk memahami dampak nutrisi terhadap performa akademik.
+- Jawaban pernyataan masalah 3 : Mengevaluasi efektivitas kursus persiapan ujian dalam meningkatkan nilai siswa.
+- Jawaban pernyataan masalah 4 : Membangun dan mengembangkan model prediktif dengan akurasi yang baik untuk mengklasifikasikan performa siswa, sehingga dapat digunakan sebagai alat bantu pengambilan keputusan pendidikan.
 
     ### Solution statements
-    - Mengajukan 2 atau lebih solution statement. Misalnya, menggunakan dua atau lebih algoritma untuk mencapai solusi yang diinginkan atau melakukan improvement pada baseline model dengan hyperparameter tuning.
-    - Solusi yang diberikan harus dapat terukur dengan metrik evaluasi.
+    - Membangun model klasifikasi untuk memprediksi performa ujian menggunakan algoritma seperti Logistic Regression dan Random Forest.
+    - Melakukan hyperparameter tuning untuk meningkatkan akurasi model.
 
 ## Data Understanding
+
+Dataset : 
 Paragraf awal bagian ini menjelaskan informasi mengenai data yang Anda gunakan dalam proyek. Sertakan juga sumber atau tautan untuk mengunduh dataset. Contoh: [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Restaurant+%26+consumer+data).
 
 Selanjutnya uraikanlah seluruh variabel atau fitur pada data. Sebagai contoh:  
